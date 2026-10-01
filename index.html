@@ -2,33 +2,114 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Section Check - Framing and Refining</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Section Check: Framing and Refining · Swift AI Academy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
+<div class="app">
 
-  <header>
-    <div class="eyebrow">
-      <span class="mono schema">AAI-E-MC1-S02-EVAL01</span>
-      <span class="badge">Evaluation</span>
-      <span class="badge">Not counted</span>
-      <span class="badge">70% to pass</span>
-    </div>
-    <h1>Section Check &middot; Framing and Refining</h1>
-    <p class="subtitle">20 questions. 70% to pass. Try as many times as you need.</p>
+  <header class="top">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Swift&nbsp;AI&nbsp;Academy</div>
+    <div class="top-meta">Section 1.2 · Framing and Refining</div>
   </header>
 
-  <div class="progress-bar-track" id="progress-track" hidden>
-    <div class="progress-bar-fill" id="progress-fill"></div>
-  </div>
-  <p class="progress-label" id="progress-label" hidden></p>
+  <main class="stage">
 
-  <div class="quiz-card" id="quiz-card"></div>
+    <!-- 1 · Opening -->
+    <section class="slide" id="intro">
+      <div class="card narrow">
+        <div class="head">
+          <div class="eyebrow">Section Check · Evaluation</div>
+          <h1 class="title">Framing and Refining</h1>
+          <p class="lede">20 quick questions on framing a request, the five moves, and knowing when to stop.</p>
+        </div>
+        <div class="rule"></div>
+        <div class="grid g3 keep3">
+          <div class="tile center"><span class="dot-ic"><span data-i="list"></span></span><h3>20 questions</h3></div>
+          <div class="tile center"><span class="dot-ic"><span data-i="target"></span></span><h3>70% to pass</h3></div>
+          <div class="tile center"><span class="dot-ic"><span data-i="refresh"></span></span><h3>Unlimited tries</h3></div>
+        </div>
+        <p class="small">This check is not counted. It is here to help you practise.</p>
+        <p class="code">AAI-E-MC1-S02-EVAL01</p>
+      </div>
+    </section>
+
+    <!-- 2 · How it works -->
+    <section class="slide" id="how" data-next="Start the check">
+      <div class="card narrow">
+        <div class="head">
+          <div class="eyebrow">How it works</div>
+          <h2 class="title">Before you begin</h2>
+        </div>
+        <ul class="list">
+          <li><span class="dot-ic sm"><span data-i="check-sq"></span></span><span class="li-text">Pick an answer, then press <strong>Check answer</strong>.</span></li>
+          <li><span class="dot-ic sm"><span data-i="info"></span></span><span class="li-text">You see why after every answer.</span></li>
+          <li><span class="dot-ic sm"><span data-i="target"></span></span><span class="li-text">You need 14 out of 20 (70%) to pass.</span></li>
+          <li><span class="dot-ic sm"><span data-i="refresh"></span></span><span class="li-text">Try as many times as you like. Each try shuffles the questions and answers.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3 · The questions (drawn by script.js) -->
+    <section class="slide" id="quiz" data-back="off">
+      <div class="card quiz" id="qcard"></div>
+    </section>
+
+    <!-- 4 · Result -->
+    <section class="slide" id="result" data-back="off" data-next="Review my answers">
+      <div class="card narrow">
+        <div class="result-top">
+          <div class="ring" id="ring"></div>
+          <div class="head">
+            <span class="kicker" id="res-kicker">Your result</span>
+            <h2 class="title" id="res-title">Result</h2>
+            <p class="status" id="res-status"></p>
+            <p class="lede" id="res-msg"></p>
+          </div>
+        </div>
+        <div class="rule"></div>
+        <div class="row">
+          <button type="button" class="btn btn-ghost btn-sm" data-retry><span data-i="refresh"></span>Try again</button>
+          <button type="button" class="btn btn-ghost btn-sm" data-save><span data-i="download"></span>Download my results</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Review -->
+    <section class="slide" id="review" data-next="Try again" data-icon="refresh">
+      <div class="card">
+        <div class="head">
+          <div class="eyebrow">Review</div>
+          <h2 class="title">Your answers</h2>
+          <p class="lede">Tap a number to see the question again.</p>
+        </div>
+        <div class="two-col even">
+          <div class="col">
+            <div class="qgrid" id="qgrid" role="group" aria-label="Questions"></div>
+            <div class="row small">
+              <span class="row"><span class="dot-ic sm ok"><span data-i="check"></span></span>Correct</span>
+              <span class="row"><span class="dot-ic sm bad"><span data-i="x"></span></span>Not quite</span>
+            </div>
+            <button type="button" class="btn btn-ghost btn-sm fit-start" data-save><span data-i="download"></span>Download my results</button>
+          </div>
+          <div class="detail" id="detail" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-left" id="progress" role="status"></div>
+    <div class="nav">
+      <button type="button" class="btn btn-ghost" id="back"><span data-i="arrow-left"></span><span class="btn-back-label">Back</span></button>
+      <button type="button" class="btn btn-primary" id="primary">Continue</button>
+    </div>
+  </footer>
 
 </div>
 <script src="script.js"></script>
