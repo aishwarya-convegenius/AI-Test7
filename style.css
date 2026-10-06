@@ -1120,3 +1120,102 @@ textarea.input { display: block; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ESL upgrade (game-specific) */
+/* Hidden slides waited 10px lower, which made the stage 10px taller than the screen.
+   A small scale keeps the soft entrance without any overflow. */
+.slide { transform: scale(0.985); }
+.slide.show { transform: none; }
+.quiz-main > .saa-do { margin: 0.2rem 0 0.4rem !important; padding: 8px 14px !important; }
+
+/* Game 11 designer assets (Oct 2026) */
+/* rule cards: icon and name on one line, "Tap to open" below */
+.saa-kit.g11-rules .saa-front { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; align-content: center; column-gap: 10px; row-gap: 6px; }
+.saa-kit.g11-rules .saa-front::after { flex-basis: 100%; text-align: left; }
+.g11-rule-ic { width: 24px; height: 24px; flex: 0 0 auto; display: block; }
+/* answer options: part / move icon after the radio */
+.opt .g11-opt-ic { width: max(18px, 1.05rem); height: max(18px, 1.05rem); flex: 0 0 auto; display: block; margin-right: -0.25rem; }
+.opt.muted .g11-opt-ic { opacity: 0.8; }
+/* quoted request / AI reply (pack component restyled to the dark theme, kept to one compact bubble) */
+.g11-quote { display: block; margin: -0.3rem 0 -0.35rem; }
+.g11-quote .tool-chat-quote { display: flex; width: 100%; margin: 0; }
+.g11-quote .quote-bubble { box-sizing: border-box; max-width: 92%; min-width: 0; padding: 0.4rem 0.85rem 0.45rem; border-radius: 14px; overflow-wrap: anywhere; line-height: 1.4; }
+.g11-quote [data-speaker="user"] .quote-bubble { margin-left: auto; background: #3C59F6; color: #F6F4EF; border-bottom-right-radius: 4px; }
+.g11-quote [data-speaker="assistant"] .quote-bubble { margin-right: auto; background: var(--glass-3); border: 1px solid var(--line-2); color: var(--ink); border-bottom-left-radius: 4px; }
+.g11-quote .quote-speaker { display: inline; margin: 0 0.5rem 0 0; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; vertical-align: 0.06em; }
+.g11-quote [data-speaker="user"] .quote-speaker { color: #DCE3FF; }
+.g11-quote [data-speaker="assistant"] .quote-speaker { color: var(--blue-ink); }
+.g11-quote .quote-text { display: inline; margin: 0; font-size: 0.92rem; font-weight: 500; white-space: pre-wrap; }
+/* a question with a quote is one bubble taller: win the room back from spacing, not from text size */
+.quiz-main:has(.g11-quote) { gap: 0.8rem; }
+.quiz-main:has(.g11-quote) .opts { gap: 0.45rem; }
+.quiz-main:has(.g11-quote) .opt { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+.quiz-main .opts.g11-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* UI consistency (Oct 2026) */
+/* question screen: question, quoted request/reply and "Your task" on the left; the answers and the reason on the right */
+.quiz-grid.uic-q2 {
+  display: grid; width: 100%; flex: 1 0 auto;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 0 clamp(24px, 4vw, 64px); align-items: center;
+}
+.uic-q2 .uic-left { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
+.uic-q2 .uic-right { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
+.uic-q2 .q-meta { margin-bottom: -0.2rem; }
+.uic-q2 .q-meta .q-kicker { margin: 0 !important; }
+.uic-q2 .q-stem { font-size: 1.45rem; line-height: 1.32; letter-spacing: -0.015em; font-weight: 700; }
+.uic-q2 .uic-left > .saa-do { margin: 0.1rem 0 0 !important; }
+.uic-q2 .g11-quote { margin: 0; }
+.uic-q2 .g11-quote .quote-bubble { max-width: 100%; }
+/* the quote now sits in the left column, so short answers go back to one full-width list */
+.uic-q2 .opts.g11-grid { display: flex; flex-direction: column; }
+.uic-q2 .quiz-side .hint { border-style: dashed; }
+@media (max-width: 900px) {
+  .quiz-grid.uic-q2 { display: flex; flex-direction: column; align-items: stretch; gap: 0.9rem; }
+}
+
+/* "Check answer" before an answer is picked: a clean glass pill with dimmed text, not a muddy amber */
+html .foot #primary:disabled, html.saa-skin .foot #primary:disabled {
+  opacity: 1 !important; background: rgba(255, 255, 255, 0.06) !important; border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  color: rgba(246, 244, 239, 0.5) !important; box-shadow: none !important; filter: none !important; cursor: not-allowed;
+}
+
+/* review screen before any answer: one calm empty-state panel fills the right column */
+#review.is-empty .two-col > .col { display: none; }
+#review.is-empty .two-col { display: flex; flex-direction: column; flex: 1 1 auto; justify-content: center; }
+#review.is-empty .detail {
+  flex: 0 0 auto; width: 100%; box-sizing: border-box; min-height: 15rem; align-items: center; justify-content: center; text-align: center;
+  background: rgba(255, 255, 255, 0.03); border: 1px dashed rgba(255, 255, 255, 0.2); border-radius: 18px; padding: 2rem 1.5rem;
+}
+.uic-empty { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; max-width: 24rem; }
+.uic-empty .dot-ic { color: var(--blue-ink); }
+.uic-empty .d-stem { font-size: 1.05rem !important; }
+#review.is-empty .detail .uic-empty .btn-link { align-self: center; }
+
+/* phones: the footer Back pill keeps its word (its arrow icon is hidden by the shared footer style), and the task box stays compact */
+@media (max-width: 480px) { .foot #back .btn-back-label { display: inline; } }
+@media (max-width: 760px) {
+  html.saa-skin .uic-q2 .uic-left > .saa-do { font-size: 0.95rem !important; padding: 0.6rem 0.9rem !important; }
+}
+
+/* QA fixes (Oct 2026) */
+/* rule cards: in the one-column (phone / tablet) layout the activity takes the full width,
+   and two cards sit side by side so the longer rules fit inside their card */
+#how .card.saa-split > .saa-work, #how .saa-kit.g11-rules { align-self: stretch; width: 100%; max-width: 100%; }
+#how .saa-kit.g11-rules .saa-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#how .saa-kit.g11-rules .saa-card { min-height: clamp(96px, 15vh, 140px); }
+#how .saa-kit.g11-rules .saa-back { padding: 10px 14px; }
+@media (max-width: 480px) {
+  #how .saa-kit.g11-rules .saa-cards { grid-template-columns: minmax(0, 1fr); }
+  #how .saa-kit.g11-rules .saa-card { min-height: 88px; }
+}
+/* review: number buttons big enough to tap */
+@media (pointer: coarse), (max-width: 760px) {
+  .qgrid { grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)) !important; gap: 0.4rem !important; }
+  .qdot { min-width: 44px; min-height: 44px; font-size: 0.9rem !important; }
+}
+@media (min-width: 761px) {
+  #review .two-col.even { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 1.5rem; }
+  .qgrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .qdot { min-height: 40px; font-size: 0.95rem; }
+}

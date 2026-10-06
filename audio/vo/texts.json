@@ -1,0 +1,343 @@
+{
+ "vaea17047": {
+  "text": "Framing and Refining. You answer 20 quick questions. They cover how to frame a request, the five moves and when to stop.",
+  "kind": "screen",
+  "screens": [
+   1
+  ]
+ },
+ "v6376090d": {
+  "text": "Here is how the section check works. There are 4 simple rules. Learn them before you start. Your task. Tap each card to see the rule.",
+  "kind": "screen",
+  "screens": [
+   2
+  ]
+ },
+ "v9004274a": {
+  "text": "The AI tool’s answer is too short, and it misses useful details. Which move fixes this? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [
+   3
+  ]
+ },
+ "v013ddf87": {
+  "text": "You have not passed yet. Look at the questions you missed. Then try again, and the order will change.",
+  "kind": "screen",
+  "screens": [
+   4
+  ]
+ },
+ "v421e3133": {
+  "text": "Here are your answers. Your task. Tap a number to see that question again.",
+  "kind": "screen",
+  "screens": [
+   5
+  ]
+ },
+ "vb0edbb0d": {
+  "text": "Yes, that is right.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "v5f4ff743": {
+  "text": "Not quite. Try again.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "v4a004b3d": {
+  "text": "All sorted. Well done.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "v912cd8bc": {
+  "text": "Not that one. Read it again and try the other box.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "ve5c0f2ee": {
+  "text": "Yes. That is the right order.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "v12d1dc0b": {
+  "text": "Not yet. The red steps are in the wrong place.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "v2ca8188e": {
+  "text": "All stamped. Well done.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "v35550fdb": {
+  "text": "Not quite. Read it again.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "ve981313a": {
+  "text": "Yes.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "v4476868f": {
+  "text": "You ask an AI tool for a safety notice. It is too long, and the tone is too formal. What is the best order to fix both problems? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v52f1e048": {
+  "text": "You ask an AI tool for a safety notice. It is too long, and the tone is too formal. What is the best order to fix both problems? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v24e736a8": {
+  "text": "The AI tool’s answer uses words that are too hard for first-year students. Which move fixes this? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v56b96ceb": {
+  "text": "The AI tool’s answer uses words that are too hard for first-year students. Which move fixes this? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v10a99681": {
+  "text": "Which request is missing the Format part? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "ve214f91e": {
+  "text": "Which request is missing the Format part? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v0fe090ba": {
+  "text": "You have 2 drafts, and each draft has some good parts. Which move helps you? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v6776c119": {
+  "text": "You have 2 drafts, and each draft has some good parts. Which move helps you? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v56f1d6ae": {
+  "text": "The AI tool’s answer covers 3 safety topics. You only need 1 topic. Which move fixes this? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v9dd7b3ed": {
+  "text": "The AI tool’s answer covers 3 safety topics. You only need 1 topic. Which move fixes this? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vdd5739e9": {
+  "text": "The AI tool’s answer is too short, and it misses useful details. Which move fixes this? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v647c2ef3": {
+  "text": "The AI tool’s reply looks polished and sure. What should you always do before you use it? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v558fe60c": {
+  "text": "The AI tool’s reply looks polished and sure. What should you always do before you use it? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vd5e6406e": {
+  "text": "A student writes this request: “For our group project due Friday, write a reminder message. Format it as one short message.” Which part is missing? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v1542982d": {
+  "text": "A student writes this request: “For our group project due Friday, write a reminder message. Format it as one short message.” Which part is missing? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vcb1adaac": {
+  "text": "Which move uses the words “Only tell me about ___”? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [
+   3
+  ]
+ },
+ "vde11b13f": {
+  "text": "Which move uses the words “Only tell me about ___”? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v14a1b39b": {
+  "text": "What does “Format” mean in a request? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vf3e98e54": {
+  "text": "What does “Format” mean in a request? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v589b9d90": {
+  "text": "The AI tool’s answer gives a fine amount. You never gave it that amount. What should you do next? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v55c2ef93": {
+  "text": "The AI tool’s answer gives a fine amount. You never gave it that amount. What should you do next? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v99d9d1f8": {
+  "text": "The AI tool replies: “Sure! Also, the last date for late submission is Monday, with a 10% penalty.” What is wrong with this reply? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vd3117afb": {
+  "text": "The AI tool replies: “Sure! Also, the last date for late submission is Monday, with a 10% penalty.” What is wrong with this reply? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v5ccf3225": {
+  "text": "Look at this request: “Write a notice.” A request has 4 parts: role, context, task and format. How many parts does this request have? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "ve00842d2": {
+  "text": "Look at this request: “Write a notice.” A request has 4 parts: role, context, task and format. How many parts does this request have? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v0e246e63": {
+  "text": "A class rep’s message covers homework, an event and a holiday at the same time. It is too much to read at once. Which move helps most? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v29ab9d3c": {
+  "text": "A class rep’s message covers homework, an event and a holiday at the same time. It is too much to read at once. Which move helps most? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v6234c7e0": {
+  "text": "A trainee writes this request to an AI tool: “You are a workshop teacher. Write a safety reminder. Format it as 3 points for the noticeboard.” Which part is missing? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v52e6a5a3": {
+  "text": "A trainee writes this request to an AI tool: “You are a workshop teacher. Write a safety reminder. Format it as 3 points for the noticeboard.” Which part is missing? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vdccd34cc": {
+  "text": "A classmate’s request does not say who the AI tool should act as. The answer is confusing. What should they do next? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v7bc6d4df": {
+  "text": "A classmate’s request does not say who the AI tool should act as. The answer is confusing. What should they do next? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v98de0481": {
+  "text": "Your request has a role, a task and a format, but it has no context. What should you add? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vcab9d71e": {
+  "text": "Your request has a role, a task and a format, but it has no context. What should you add? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v3694c031": {
+  "text": "You have refined an answer 2 times. Now only 1 date needs fixing. What should you do? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v2b33240e": {
+  "text": "You have refined an answer 2 times. Now only 1 date needs fixing. What should you do? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vca5b8a16": {
+  "text": "A 4th round of refining would take longer than rewriting the last line yourself. What is the smart move? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v45bca975": {
+  "text": "A 4th round of refining would take longer than rewriting the last line yourself. What is the smart move? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v782bf5d6": {
+  "text": "A trainee puts the AI tool’s safety notice on the noticeboard. They do not read it first. Which step did they skip? Your task. Choose one answer, then press Check answer. You see the reason here after you press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "vb47549b5": {
+  "text": "A trainee puts the AI tool’s safety notice on the noticeboard. They do not read it first. Which step did they skip? Your task. Choose one answer, then press Check answer.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v0e4ed333": {
+  "text": "You passed the section check. Well done. You can frame a request, refine it and know when to stop.",
+  "kind": "screen",
+  "screens": [],
+  "from": "playthrough"
+ },
+ "v35b51e3b": {
+  "text": "Pick an answer, then press Check answer.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "vb32f713d": {
+  "text": "You see the reason after every answer.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "v6384fff1": {
+  "text": "You need 14 out of 20 to pass. That is 70%.",
+  "kind": "feedback",
+  "screens": []
+ },
+ "vde4bfbde": {
+  "text": "You can try as many times as you like. Each try shuffles the questions and answers.",
+  "kind": "feedback",
+  "screens": []
+ }
+}

@@ -334,95 +334,133 @@
 
   var ITEMS = [
     { id: 'Q01', concept: 'crtf', lane: 'ITI',
-      stem: 'A trainee asks AI: “You are a workshop teacher. Write a safety reminder. Format it as 3 points for the noticeboard.” What is missing?',
+      stem: 'A trainee writes this request to an AI tool: “You are a workshop teacher. Write a safety reminder. Format it as 3 points for the noticeboard.” Which part is missing?',
       options: ['Context', 'Role', 'Task', 'Format'], correct: 0,
-      why: 'Context says who it is for, and why you need it.' },
+      why: 'Context tells the AI tool who the answer is for and why you need it.' },
     { id: 'Q02', concept: 'crtf', lane: 'Campus',
-      stem: '“For our group project due Friday, write a reminder message. Format it as one short message.” What is missing?',
+      stem: 'A student writes this request: “For our group project due Friday, write a reminder message. Format it as one short message.” Which part is missing?',
       options: ['Context', 'Role', 'Task', 'Format'], correct: 1,
-      why: 'Role says who the AI should act as.' },
+      why: 'Role tells the AI tool who it should act as.' },
     { id: 'Q03', concept: 'crtf', lane: 'ITI',
-      stem: 'Which request is missing the Format?',
+      stem: 'Which request is missing the Format part?',
       options: [
         'You are a lab assistant. For students before the practical, write a short safety note. Format it as 3 points.',
         'You are a lab assistant. For students before the practical, write a short safety note.',
         'You are a teacher. For new students, write a notice. Format it as one paragraph.',
         'You are a facilitator. For the batch, write a reminder. Format it as an email.'
       ], correct: 1,
-      why: 'Format says how the answer should look. This request never says it.' },
+      why: 'Format tells the AI tool how the answer should look. This request does not say it.' },
     { id: 'Q04', concept: 'crtf', lane: 'Campus',
-      stem: 'A classmate’s request never said who the AI should act as. The answer is confusing. What should they do next?',
-      options: ['Add a role', 'Add a format', 'Delete the request', 'Ask the AI to check itself'], correct: 0,
-      why: 'The missing part is Role, so add a role.' },
+      stem: 'A classmate’s request does not say who the AI tool should act as. The answer is confusing. What should they do next?',
+      options: ['Add a role.', 'Add a format.', 'Delete the request.', 'Ask the AI tool to check itself.'], correct: 0,
+      why: 'The missing part is the role, so they should add a role.' },
     { id: 'Q05', concept: 'crtf', lane: 'General',
       stem: 'What does “Format” mean in a request?',
-      options: ['Who the AI should act as', 'How the answer should look', 'What you want the AI to make', 'Why you need it'], correct: 1,
-      why: 'Format is how the finished answer should look.' },
+      options: ['Who the AI tool should act as', 'How the answer should look', 'What you want the AI tool to make', 'Why you need it'], correct: 1,
+      why: 'Format means how the finished answer should look.' },
     { id: 'Q06', concept: 'move', lane: 'ITI',
-      stem: 'The AI’s answer covered 3 safety topics. You only needed 1. Which move fixes this?',
+      stem: 'The AI tool’s answer covers 3 safety topics. You only need 1 topic. Which move fixes this?',
       options: ['Narrow', 'Expand', 'Change register', 'Combine'], correct: 0,
       why: 'Narrow fixes an answer that covers too much.' },
     { id: 'Q07', concept: 'move', lane: 'Campus',
-      stem: 'The AI’s answer used words that are too hard for first-year students. Which move fixes this?',
+      stem: 'The AI tool’s answer uses words that are too hard for first-year students. Which move fixes this?',
       options: ['Narrow', 'Expand', 'Change register', 'Combine'], correct: 2,
-      why: 'Change register fixes the wrong tone or reading level.' },
+      why: 'Change register fixes the wrong tone or the wrong reading level.' },
     { id: 'Q08', concept: 'move', lane: 'ITI',
-      stem: 'The AI’s answer was too short and missed useful details. Which move fixes this?',
+      stem: 'The AI tool’s answer is too short, and it misses useful details. Which move fixes this?',
       options: ['Narrow', 'Expand', 'Change register', 'Check it'], correct: 1,
-      why: 'Expand adds the detail you need.' },
+      why: 'Expand adds the details that you need.' },
     { id: 'Q09', concept: 'move', lane: 'Campus',
-      stem: 'You have two drafts. Each one has some good parts. Which move helps?',
+      stem: 'You have 2 drafts, and each draft has some good parts. Which move helps you?',
       options: ['Narrow', 'Expand', 'Check it', 'Combine'], correct: 3,
-      why: 'Combine joins the best parts of two drafts.' },
+      why: 'Combine joins the best parts of 2 drafts.' },
     { id: 'Q10', concept: 'move', lane: 'ITI',
-      stem: 'The AI’s answer mentions a fine amount. You never gave it that amount. What should you do next?',
-      options: ['Ask “What might be wrong here?”', 'Ask for more detail', 'Combine two drafts', 'Use it as it is'], correct: 0,
-      why: 'AI should not make up a fine, a rule or a date. Always check it.' },
+      stem: 'The AI tool’s answer gives a fine amount. You never gave it that amount. What should you do next?',
+      options: ['Ask, “What might be wrong here?”', 'Ask for more detail.', 'Combine 2 drafts.', 'Use the answer as it is.'], correct: 0,
+      why: 'An AI tool should not make up a fine, a rule or a date. Always check these.' },
     { id: 'Q11', concept: 'move', lane: 'Campus',
-      stem: 'The AI replies: “Sure! Also, the last date for late submission is Monday, with a 10% penalty.” What is wrong with this reply?',
-      options: ['It is too short', 'It added a date and a penalty you never gave it', 'It used a role', 'It is in the wrong format'], correct: 1,
-      why: 'AI must not make up dates or penalties.' },
+      stem: 'The AI tool replies: “Sure! Also, the last date for late submission is Monday, with a 10% penalty.” What is wrong with this reply?',
+      options: ['It is too short.', 'It adds a date and a penalty that you never gave it.', 'It uses a role.', 'It is in the wrong format.'], correct: 1,
+      why: 'An AI tool must not make up dates or penalties.' },
     { id: 'Q12', concept: 'move', lane: 'ITI',
-      stem: 'You asked AI for a safety notice. It is too long, and the tone is too formal. What is the best order to fix both?',
-      options: ['Narrow it first, then change the register', 'Change the register first, then narrow it', 'Combine it, then check it', 'Only change the register'], correct: 0,
-      why: 'Fix what it covers first. Then you can see what tone still needs fixing.' },
+      stem: 'You ask an AI tool for a safety notice. It is too long, and the tone is too formal. What is the best order to fix both problems?',
+      options: ['Narrow it first, then change the register.', 'Change the register first, then narrow it.', 'Combine it, then check it.', 'Only change the register.'], correct: 0,
+      why: 'First fix what the notice covers. Then you can see what tone still needs fixing.' },
     { id: 'Q13', concept: 'stop', lane: 'ITI',
-      stem: 'You have refined an answer twice. Now only one date needs fixing. What should you do?',
-      options: ['Ask the AI again', 'Fix it yourself', 'Start over completely', 'Combine two drafts'], correct: 1,
-      why: 'Stop refining when fixing it yourself is faster.' },
+      stem: 'You have refined an answer 2 times. Now only 1 date needs fixing. What should you do?',
+      options: ['Ask the AI tool again.', 'Fix it yourself.', 'Start again from the beginning.', 'Combine 2 drafts.'], correct: 1,
+      why: 'Stop refining when it is faster to fix the answer yourself.' },
     { id: 'Q14', concept: 'stop', lane: 'Campus',
-      stem: 'The AI’s reply looks polished and sure. What should you always do before you use it?',
-      options: ['Check it for made-up details', 'Make it longer', 'Change the tone', 'Combine it with another draft'], correct: 0,
-      why: 'An answer can sound sure and still be wrong. Always check before you use it.' },
+      stem: 'The AI tool’s reply looks polished and sure. What should you always do before you use it?',
+      options: ['Check it for made-up details.', 'Make it longer.', 'Change the tone.', 'Combine it with another draft.'], correct: 0,
+      why: 'An answer can sound sure and still be wrong. Always check it before you use it.' },
     { id: 'Q15', concept: 'stop', lane: 'ITI',
-      stem: 'A trainee puts the AI’s safety notice on the noticeboard without reading it first. What did they skip?',
+      stem: 'A trainee puts the AI tool’s safety notice on the noticeboard. They do not read it first. Which step did they skip?',
       options: ['Checking it before use', 'Narrowing it', 'Adding a role', 'Changing the register'], correct: 0,
-      why: 'Always check an answer before you use it.' },
+      why: 'You must always check an answer before you use it.' },
     { id: 'Q16', concept: 'crtf', lane: 'Campus',
-      stem: '“Write a notice.” How many of the 4 parts (role, context, task, format) does this request have?',
+      stem: 'Look at this request: “Write a notice.” A request has 4 parts: role, context, task and format. How many parts does this request have?',
       options: ['0', '1', '2', '4'], correct: 1,
       why: 'It only gives a task. The other 3 parts are missing.' },
     { id: 'Q17', concept: 'crtf', lane: 'ITI',
-      stem: 'Your request has a role, a task and a format, but no context. What should you add?',
-      options: ['Who it is for, and why', 'How it should look', 'What to make', 'Who to act as'], correct: 0,
-      why: 'Context is who it is for, and why you need it.' },
+      stem: 'Your request has a role, a task and a format, but it has no context. What should you add?',
+      options: ['Who it is for and why you need it', 'How it should look', 'What to make', 'Who to act as'], correct: 0,
+      why: 'Context is who the answer is for and why you need it.' },
     { id: 'Q18', concept: 'move', lane: 'General',
       stem: 'Which move uses the words “Only tell me about ___”?',
       options: ['Narrow', 'Expand', 'Combine', 'Check it'], correct: 0,
-      why: 'Those words narrow a request.' },
+      why: 'These words narrow a request.' },
     { id: 'Q19', concept: 'move', lane: 'Campus',
-      stem: 'A class rep’s message covers homework, an event and a holiday, all at once. It is too much to take in. Which move helps most?',
+      stem: 'A class rep’s message covers homework, an event and a holiday at the same time. It is too much to read at once. Which move helps most?',
       options: ['Narrow', 'Expand', 'Change register', 'Check it'], correct: 0,
-      why: 'Narrow it down to one topic at a time.' },
+      why: 'Narrow the message to 1 topic at a time.' },
     { id: 'Q20', concept: 'stop', lane: 'ITI',
-      stem: 'Refining a 4th time would take longer than rewriting the last line yourself. What is the smart move?',
-      options: ['Refine a 5th time', 'Stop and fix it yourself', 'Ask for a completely new draft', 'Combine 3 drafts'], correct: 1,
-      why: 'If fixing it yourself is faster, just fix it.' }
+      stem: 'A 4th round of refining would take longer than rewriting the last line yourself. What is the smart move?',
+      options: ['Refine it a 5th time.', 'Stop and fix it yourself.', 'Ask for a completely new draft.', 'Combine 3 drafts.'], correct: 1,
+      why: 'If it is faster to fix it yourself, then stop and fix it.' }
   ];
+  /* Game 11 designer assets (Oct 2026): a part/move icon on an answer only when
+     the whole answer is that name, and a chat-bubble copy of a quoted request
+     or AI reply. Neither changes any question, answer or reason text. */
+  var OPT_ICONS = {
+    'Role': 'icon-role', 'Context': 'icon-context', 'Task': 'icon-task', 'Format': 'icon-format',
+    'Narrow': 'icon-move-1', 'Expand': 'icon-move-2', 'Change register': 'icon-move-3',
+    'Check it': 'icon-move-4', 'Combine': 'icon-move-5'
+  };
+  var QUOTES = { Q01: 'user', Q02: 'user', Q11: 'assistant', Q16: 'user', Q18: 'user' };
+  function optIcon(o) {
+    return OPT_ICONS[o] ? '<img class="g11-opt-ic" src="assets/icons/' + OPT_ICONS[o] + '.webp" alt="" aria-hidden="true" width="18" height="18">' : '';
+  }
+  /* Same DOM as the pack's renderChatQuote (live text, set with textContent). */
+  function renderChatQuote(container, speaker, text) {
+    var frame = document.createElement('section');
+    frame.className = 'tool-chat-quote';
+    frame.setAttribute('data-speaker', speaker);
+    frame.setAttribute('aria-label', speaker === 'user' ? 'Quoted learner request' : 'Quoted AI reply');
+    var bubble = document.createElement('div'); bubble.className = 'quote-bubble';
+    var label = document.createElement('p'); label.className = 'quote-speaker';
+    label.textContent = speaker === 'user' ? 'Your request' : 'AI reply';
+    var quote = document.createElement('blockquote'); quote.className = 'quote-text'; quote.textContent = text;
+    bubble.appendChild(label); bubble.appendChild(quote); frame.appendChild(bubble);
+    container.replaceChildren(frame);
+  }
+  function mountQuote(it) {
+    var box = document.getElementById('qquote');
+    if (!box) return;
+    var m = QUOTES[it.id] && it.stem.match(/“([^”]+)”/);
+    if (!m) { box.remove(); return; }
+    renderChatQuote(box, QUOTES[it.id], m[1]);
+    /* short one-word answers sit 2 by 2 so the extra bubble still fits */
+    if (it.options.every(function (o) { return o.length <= 16; })) qcard.querySelector('.opts').classList.add('g11-grid');
+  }
+
   var PASS_PERCENT = 70;
   var NEEDED = Math.ceil(ITEMS.length * PASS_PERCENT / 100);
 
   var quiz = [], cur = 0, answers = [], picked = -1, checked = false;
+  /* UI consistency (Oct 2026): each checked question is kept as it looked after Check answer,
+     so Back can show it again (read-only). Scoring is untouched: a checked question cannot be re-answered. */
+  var snaps = [];
   var qcard = document.getElementById('qcard');
 
   // One attempt: questions shuffled, and each question's options shuffled.
@@ -441,14 +479,13 @@
     quiz = buildAttempt();
     cur = 0;
     answers = [];
+    snaps = [];
     Deck.go('quiz');
   }
 
   function drawProgress() {
-    var pct = Math.round(cur / quiz.length * 100);
-    Deck.setProgress(
-      '<div class="qprog"><div class="bar"><i style="width:' + pct + '%"></i></div>' +
-      '<span>Question ' + (cur + 1) + ' of ' + quiz.length + '</span></div>',
+    /* the standard footer bar reads this "n / N" count */
+    Deck.setProgress('<span class="count">' + (cur + 1) + ' / ' + quiz.length + '</span>',
       'Question ' + (cur + 1) + ' of ' + quiz.length);
   }
 
@@ -456,21 +493,36 @@
     var it = quiz[cur];
     picked = -1;
     checked = false;
+    /* left: the question (and any quoted request or reply) and the task box; right: the answers, then the reason */
     qcard.innerHTML =
+      '<div class="quiz-grid uic-q2"><div class="quiz-main uic-left">' +
       '<div class="q-meta"><span class="q-kicker">Quick check</span><span class="tag">' + esc(it.lane) + '</span></div>' +
-      '<div class="quiz-grid"><div class="quiz-main">' +
       '<h2 class="q-stem" id="qstem" tabindex="-1">' + esc(it.stem) + '</h2>' +
-      '<div class="opts" role="radiogroup" aria-labelledby="qstem">' +
+      '<div class="chat g11-quote" id="qquote"></div>' +
+      '<p class="do saa-do"><b class="saa-do-label">Your task.</b> Choose one answer, then press Check answer.</p></div>' +
+      '<div class="uic-right"><div class="opts" role="radiogroup" aria-labelledby="qstem">' +
       it.options.map(function (o, i) {
-        return '<button type="button" class="opt" role="radio" aria-checked="false" data-opt="' + i + '"><span class="radio"></span><span>' + esc(o) + '</span></button>';
-      }).join('') + '</div></div>' +
-      '<div class="quiz-side" id="side"><div class="hint">' + ic('info') + '<span>Choose an answer, then press <strong>Check answer</strong>. You will see why here.</span></div></div></div>';
-    qcard.querySelectorAll('.opt').forEach(function (b) {
-      b.addEventListener('click', function () {
-        if (checked) return;
-        picked = parseInt(b.getAttribute('data-opt'), 10);
-        qcard.querySelectorAll('.opt').forEach(function (x) { x.setAttribute('aria-checked', String(x === b)); });
-        Deck.enablePrimary(true);
+        return '<button type="button" class="opt" role="radio" aria-checked="false" data-opt="' + i + '"><span class="radio"></span>' + optIcon(o) + '<span>' + esc(o) + '</span></button>';
+      }).join('') + '</div>' +
+      '<div class="quiz-side" id="side"><div class="hint">' + ic('info') + '<span>You see the reason here after you press <strong>Check answer</strong>.</span></div></div></div>';
+    mountQuote(it);
+    var optBtns = Array.prototype.slice.call(qcard.querySelectorAll('.opt'));
+    function pick(b) {
+      if (checked) return;
+      picked = parseInt(b.getAttribute('data-opt'), 10);
+      optBtns.forEach(function (x) { x.setAttribute('aria-checked', String(x === b)); x.tabIndex = x === b ? 0 : -1; });
+      Deck.enablePrimary(true);
+    }
+    /* radio group: one tab stop; the arrow keys move between the answers and choose one */
+    optBtns.forEach(function (b, i) {
+      b.tabIndex = i === 0 ? 0 : -1;
+      b.addEventListener('click', function () { pick(b); });
+      b.addEventListener('keydown', function (e) {
+        var d = (e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1 : (e.key === 'ArrowUp' || e.key === 'ArrowLeft') ? -1 : 0;
+        if (!d || checked) return;
+        e.preventDefault(); e.stopPropagation();
+        var n = optBtns[(i + d + optBtns.length) % optBtns.length];
+        n.focus(); pick(n);
       });
     });
     Deck.setPrimary('Check answer', { disabled: true, icon: 'check' });
@@ -493,14 +545,27 @@
       else b.classList.add('muted');
     });
     document.getElementById('side').innerHTML = ok
-      ? '<div class="fb ok" role="status">' + ic('check') + '<div class="fb-body"><span class="fb-title">Correct</span><span>' + esc(it.why) + '</span></div></div>'
-      : '<div class="fb no" role="status">' + ic('alert') + '<div class="fb-body"><span class="fb-title">Not quite. The answer is “' + esc(it.options[it.correct]) + '”.</span><span>' + esc(it.why) + '</span></div></div>';
+      ? '<div class="fb ok" role="status">' + ic('check') + '<div class="fb-body"><span class="fb-title">Yes.</span><span>' + esc(it.why) + '</span></div></div>'
+      : '<div class="fb no" role="status">' + ic('alert') + '<div class="fb-body"><span class="fb-title">Not quite.</span><span>Correct answer: ' + esc(it.options[it.correct]) + '</span><span>' + esc(it.why) + '</span></div></div>';
     answers.push({
       n: cur + 1, id: it.id, lane: it.lane, stem: it.stem, why: it.why,
       chosen: it.options[picked], right: it.options[it.correct], ok: ok
     });
     Deck.setPrimary(cur === quiz.length - 1 ? 'See my result' : 'Next question');
     Deck.fit();
+    snaps[cur] = qcard.innerHTML;
+  }
+
+  // Show a question that was already checked, exactly as it was left.
+  function showSnap(i) {
+    cur = i;
+    checked = true;
+    qcard.innerHTML = snaps[i];
+    Deck.setPrimary(i === quiz.length - 1 ? 'See my result' : 'Next question');
+    drawProgress();
+    Deck.fit();
+    var stem = document.getElementById('qstem');
+    if (stem) { try { stem.focus({ preventScroll: true }); } catch (e) { stem.focus(); } }
   }
 
   function score() {
@@ -523,17 +588,27 @@
       });
     });
     document.getElementById('res-kicker').textContent = 'Section check result';
-    document.getElementById('res-title').textContent = s.passed ? 'You passed' : 'Not yet';
+    document.getElementById('res-title').textContent = s.passed ? 'You passed the section check.' : 'You have not passed yet.';
     var status = document.getElementById('res-status');
-    status.className = 'status' + (s.passed ? ' ok' : '');
-    status.textContent = s.right + ' of ' + answers.length + ' correct. You need ' + NEEDED + ' to pass.';
+    status.className = 'status saa-vo-skip' + (s.passed ? ' ok' : '');
+    status.textContent = 'You got ' + s.right + ' of ' + answers.length + ' correct. You need ' + NEEDED + ' to pass.';
     document.getElementById('res-msg').textContent = s.passed
-      ? 'Well done. You can frame a request, refine it, and know when to stop.'
-      : 'Look at the questions you missed, then try again. The order will change.';
+      ? 'Well done. You can frame a request, refine it and know when to stop.'
+      : 'Look at the questions you missed. Then try again, and the order will change.';
   }
 
   function drawReview() {
-    if (!answers.length) return;
+    // Nobody has answered yet (for example, the learner jumped here): say so, and offer the way in.
+    document.getElementById('review').classList.toggle('is-empty', !answers.length);
+    if (!answers.length) {
+      document.getElementById('qgrid').innerHTML = '';
+      document.getElementById('detail').innerHTML =
+        '<div class="uic-empty"><span class="dot-ic lg">' + ic('list') + '</span>' +
+        '<p class="d-stem">Answer the check first. Your answers will appear here.</p>' +
+        '<button type="button" class="btn-link" data-go="how">Go to the check ' + ic('arrow-right') + '</button></div>';
+      Deck.fit();
+      return;
+    }
     var grid = document.getElementById('qgrid');
     grid.innerHTML = answers.map(function (a, i) {
       return '<button type="button" class="qdot ' + (a.ok ? 'ok' : 'no') + '" aria-pressed="false" data-q="' + i + '" aria-label="Question ' + a.n + ', ' + (a.ok ? 'correct' : 'not quite') + '">' + a.n + '</button>';
@@ -565,7 +640,7 @@
   function saveResults() {
     var s = score();
     var lines = [
-      'Section Check: Framing and Refining (AAI-E-MC1-S02-EVAL01)',
+      'Section Check: Framing and Refining',
       'Swift AI Academy',
       '',
       'Score: ' + s.pct + '% (' + s.right + ' of ' + answers.length + ' correct)',
@@ -586,14 +661,22 @@
 
   Deck.init({
     how: {
-      primary: function () { startQuiz(); return false; }
+      /* an attempt in progress (the learner came Back from question 1) is resumed, not thrown away */
+      primary: function () {
+        if (quiz.length && answers.length && answers.length < quiz.length) { Deck.go('quiz'); return false; }
+        startQuiz(); return false;
+      }
     },
     quiz: {
-      enter: function () { if (!quiz.length) quiz = buildAttempt(); renderQuestion(); },
+      enter: function () { if (!quiz.length) quiz = buildAttempt(); if (snaps[cur]) showSnap(cur); else renderQuestion(); },
       primary: function () {
         if (!checked) { checkAnswer(); return false; }
-        if (cur < quiz.length - 1) { cur++; renderQuestion(); return false; }
+        if (cur < quiz.length - 1) { cur++; if (snaps[cur]) showSnap(cur); else renderQuestion(); return false; }
         // last question: fall through to the result slide
+      },
+      // Back: the previous question (read-only, as it was checked); from question 1, the screen before the check.
+      back: function () {
+        if (cur > 0 && snaps[cur - 1]) { showSnap(cur - 1); return false; }
       }
     },
     result: { enter: drawResult },
